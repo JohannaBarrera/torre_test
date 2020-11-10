@@ -19,7 +19,11 @@ body{
 }
 
 .large-padding{
-    padding: 10px 15px;
+    padding: 10px 15px;    
+}
+
+.large-padding-layout{
+    padding: 32px 15px;  
 }
 
 .black{
@@ -27,6 +31,9 @@ body{
 
 .white-text{
     color: white;}
+
+.green-text{
+    color: yellowgreen;}
 
 nav {
     text-align: right;    
@@ -45,4 +52,12 @@ nav li a{
 nav li a:hover{
     color: yellowgreen;
  }
+
+ a {
+     color: yellowgreen;
+ }
+
+ a:hover {
+    color: yellowgreen;
+}
 
