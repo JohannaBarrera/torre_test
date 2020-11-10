@@ -8,6 +8,9 @@ import errorMiddleware from "../../middlewares/errorMiddleware";
 import { PassportHandler } from "../attach-middleware/PassportMiddlewareAttach";
 import { StaticHandler } from "../attach-middleware/StaticMiddlewareAttach";
 import staticMiddleware from "../../middlewares/staticMiddleware";
+import { apiTorre } from "../../services/apiTorre/apiTorre";
+import { BDcontroller } from "controllers/BDcontroller";
+import { User } from "models/userModel";
 
 export default class Server {
   public app: Application;
@@ -27,13 +30,15 @@ export default class Server {
 
   config(): void {
     this.app.set("port", process.env.PORT || 3000);
+    this.app.set('views', this.dirRoot + '/views');
+    this.app.set("view engine", "jade");
     this.commonHandler.apply();
     this.router.apply();
     this.staticHandler.apply();
     this.errorHandler.apply();
   }
 
-  start(): void {
+  async start(): Promise <void> {
     this.app.listen(this.app.get("port"), () => {
       console.log(
         `⚡️[server]: Server is running at https://localhost:${this.app.get(

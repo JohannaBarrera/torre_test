@@ -21,4 +21,32 @@ export default [
     method: "post",
     handler: Controller.register
   },
+  {
+    path: "profile",
+    method: "post",
+    handler: Controller.profileView
+  },
+
+  {
+    path: "search",
+    method: "get",
+    handler: Controller.search
+  },
+
+  {
+    path: "searchJob",
+    method: "get",
+    handler: Controller.searchJob
+  },
+
+  {
+    path: "job",
+    method: "get",
+    handler: Controller.Job
+  },
+
+
+
+ 
+
 ];

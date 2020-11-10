@@ -1,0 +1,16 @@
+extends ./layoutSesion.jade
+block contenido
+    
+    div(class="row justify-content-center white-text ")
+         div(class="form-group col-md-6 d-inline-flex p-2 flex-column")
+                img.image(src = datos.picture , class="avatar rounded-circle img-thumbnail picture-fix", alt="Responsive image"   )
+            
+                label objective  :  #{datos.objective}     
+
+                label strengths  :  #{datos.strengths}
+                                        
+                label opportunity  :  #{datos.opportunity}                       
+            
+                label minAmount :  #{datos.minAmount}
+                
+                label maxAmount  :  #{datos.maxAmount}

@@ -26,6 +26,10 @@ body{
     padding: 32px 15px;  
 }
 
+.picture-fix{
+    width: 100px; 
+}
+
 .black{
     background-color: rgb(35, 36, 37);}
 

@@ -1,0 +1,20 @@
+extends ./layoutSesion.jade
+block contenido
+
+  
+    div(class="row justify-content-center ")
+        div(class="col-md-6 remover_float center-block big-top left-top ")
+           
+            form(action="profile" method="post")
+
+                div(class="form-group green-text")                    
+
+                    label(for="search") Search Person
+                    input(type= "text", name="search" placeholder="word key" id="search" class="form-control")
+
+            
+                div(class="row pl-4 big-top ")
+                    div(class="col-xs-12 form-group right-space")
+                        input(type="submit", value="Send")
+    
+

@@ -15,7 +15,6 @@ export class apiTorre {
     return configuration;
   }
 
-
   /**
    * method that return the data of person
    */
@@ -62,10 +61,11 @@ export class apiTorre {
     configuration.url = "https://torre.co/api/opportunities/" + id_job;
     const { data } = await axios(configuration);
 
-    const strengths = data.strengths.map(elemnt => elemnt.name);    
+    const strengths = data.strengths.map(elemnt => elemnt.name);
+
 
     const job_details = {
-      id: Number,
+      picture: String,
       strengths: String,
       opportunity: String,
       objective: String,
@@ -73,7 +73,7 @@ export class apiTorre {
       maxAmount: Number,
     };
 
-    job_details.id = data.id;
+    job_details.picture = data.organizations[0].picture;
     job_details.strengths = strengths;
     job_details.opportunity = data.opportunity;
     job_details.objective = data.objective;
@@ -83,3 +83,16 @@ export class apiTorre {
     return job_details;
   }
 }
+
+
+
+
+
+/*
+VWY8DGrN
+Owb6PLwo
+VWYa1yWN
+awyJ42dN
+
+
+*/
