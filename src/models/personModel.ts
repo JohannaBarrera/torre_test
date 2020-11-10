@@ -4,8 +4,8 @@ import { Sequelize, STRING, Model, NUMBER } from "sequelize";
 /**
  * class that create the table person
  */
-export class Apps extends Model { }
-Apps.init({
+export class Person extends Model { }
+Person.init({
   id: { type: NUMBER, primaryKey: true },
   name: { type: STRING },
   professionalHeadline: { type: STRING },
@@ -14,7 +14,7 @@ Apps.init({
   summaryOfBio: { type: STRING },
   strengths: { type: STRING },
   education: { type: STRING },
-}, { sequelize: quelize, modelName: "person" });
+}, { sequelize: quelize, modelName: "Person" });
 
 
 

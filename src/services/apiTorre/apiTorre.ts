@@ -3,6 +3,7 @@
 import axios, { AxiosRequestConfig } from "axios";
 import { strict } from "assert";
 
+
 export class apiTorre {
 
   public static config(params = {}) {
@@ -30,6 +31,7 @@ export class apiTorre {
     
 
     const person_details = {
+      id: Number,
       professionalHeadline: String,
       picture: String,
       name: String,
@@ -39,6 +41,7 @@ export class apiTorre {
       education: String
     };
 
+    person_details.id = person.person.id;
     person_details.professionalHeadline = person.person.professionalHeadline;
     person_details.picture = person.person.picture;
     person_details.name = person.person.name;
@@ -59,15 +62,18 @@ export class apiTorre {
     configuration.url = "https://torre.co/api/opportunities/" + id_job;
     const { data } = await axios(configuration);
 
-    const strengths = data.strengths.map(elemnt => elemnt.name);
+    const strengths = data.strengths.map(elemnt => elemnt.name);    
 
     const job_details = {
+      id: Number,
       strengths: String,
       opportunity: String,
       objective: String,
       minAmount: Number,
-      maxAmount: Number
+      maxAmount: Number,
     };
+
+    job_details.id = data.id;
     job_details.strengths = strengths;
     job_details.opportunity = data.opportunity;
     job_details.objective = data.objective;
