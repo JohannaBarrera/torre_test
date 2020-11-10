@@ -2,4 +2,3 @@ node_modules
 .env
 dist
 client_secret.json
-src/public

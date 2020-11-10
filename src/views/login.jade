@@ -1,0 +1,23 @@
+extends ./layout.jade
+
+block contenido
+    div(class="col-md-8 remover_float center-block big-top left-top")
+        h1 Login
+        form(action="/sessions" method="post")
+
+            div(class="form-group")
+                label(for="email") Email    
+                input(type="text"  name="email" placeholder="email" id="email" , class="form-control") 
+            div
+                label(for="pass") Pass  
+                input(type="password", name="password" placeholder="pass" id="pass" class="form-control")
+
+        
+            div(class="row big-top ")
+                div(class="col-xs-12 right-space")
+                    input(type="submit", value="Send")
+                div(class="col-sm-6 text-right")
+                    a(href="/signup")     don't have account
+
+
+

@@ -1,0 +1,48 @@
+body{
+    background-color: rgb(17, 16, 16);
+}
+
+.right-space{
+    margin-right: 1em ;
+}
+
+.remove_float{
+    float: none;
+}
+
+.top-space{
+    margin-top: 1.5em;
+}
+
+.big-top-space{
+    margin-top: 200px;
+}
+
+.large-padding{
+    padding: 10px 15px;
+}
+
+.black{
+    background-color: rgb(35, 36, 37);}
+
+.white-text{
+    color: white;}
+
+nav {
+    text-align: right;    
+}
+
+nav li{
+    display: inline-block;
+    margin-right: 1em;
+    font-size: 1.2em;
+}
+
+nav li a{
+   color: yellowgreen;
+}
+
+nav li a:hover{
+    color: yellowgreen;
+ }
+
