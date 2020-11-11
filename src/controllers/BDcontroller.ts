@@ -19,7 +19,7 @@ export class BDcontroller {
   public static async findUser(userName: any) {
 
     try {
-      let dataUser = await User.findOne({ where: { username: userName } });
+      const dataUser = await User.findOne({ where: { username: userName } });
       return dataUser?.get().username;
     } catch (err) {
       console.error(err);

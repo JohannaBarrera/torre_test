@@ -24,10 +24,10 @@ export class apiTorre {
     const { data: person, data: strengths , data: education} = await axios(configuration);
 
 
-    let infoStrengths = strengths.strengths.map(element => element.name);
-    let infoEducation = education.education.map(element => element.name);
+    const infoStrengths = strengths.strengths.map(element => element.name);
+    const infoEducation = education.education.map(element => element.name);
 
-    
+
 
     const person_details = {
       id: Number,
@@ -50,7 +50,7 @@ export class apiTorre {
     person_details.education = infoEducation;
 
     return person_details;
-  };
+  }
 
     /**
    * method that return the data of ofert job

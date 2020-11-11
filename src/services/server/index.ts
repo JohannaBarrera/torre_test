@@ -30,7 +30,7 @@ export default class Server {
 
   config(): void {
     this.app.set("port", process.env.PORT || 3000);
-    this.app.set('views', this.dirRoot + '/views');
+    this.app.set("views", this.dirRoot + "/views");
     this.app.set("view engine", "jade");
     this.commonHandler.apply();
     this.router.apply();
