@@ -1,7 +1,7 @@
 {
-  "name": "mobilenik_backend",
+  "name": "torre_test",
   "version": "1.0.0",
-  "description": "gestionar la API de Bitrise para automatizar la disponibilización de las aplicaciones que seran testeadas por los clientes.",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "prettier:base": "prettier --parser typescript",
@@ -11,7 +11,7 @@
     "clean": "rimraf ./dist",
     "build": "npm run clean && tsc && cp -R src/public dist",
     "dev": "nodemon -r dotenv/config ./src/app.ts",
-    "start": "npm run build && nodemon -r dotenv/config ./dist/app.js",
+    "start": "npm run build && node -r dotenv/config ./dist/app.js",
     "prod": "npm run start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
