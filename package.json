@@ -6,7 +6,7 @@
   "scripts": {
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "clean": "rimraf ./dist",
-    "build": "npm run clean && tsc && cp -R src/public dist",
+    "build": "npm run clean && tsc && cp -R src/public dist && cp -R src/views dist",
     "dev": "nodemon -r dotenv/config ./src/app.ts",
     "start": "npm run build && node -r dotenv/config ./dist/app.js",
     "prod": "node -r dotenv/config ./dist/app.js",
