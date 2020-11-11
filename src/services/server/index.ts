@@ -35,7 +35,7 @@ export default class Server {
     this.commonHandler.apply();
     this.router.apply();
     this.staticHandler.apply();
-    this.errorHandler.apply();
+    // this.errorHandler.apply();
   }
 
   async start(): Promise <void> {
